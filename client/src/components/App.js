@@ -15,7 +15,7 @@ class App extends Component {
     		<Router>
     			<div>
     				<Switch>
-    					<Route path="/" component={Invite} />
+    					<Route exact path="/" component={Invite} />
     					<Route path="/going" component={Going} />
     					<Route path="/notgoing" component={NotGoing} />
     				</Switch>
