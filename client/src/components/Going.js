@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {getGoing} from '../actions/inviteActions'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 class Going extends Component {
@@ -12,15 +13,20 @@ class Going extends Component {
         return (
             <div>
                 <h1>Going</h1>
-                <div className="responded">
-                    {this.props.going.map(user => (
-                        <div key={user.id} className="usersGoing">
-                            <img src={user.picture} alt='' />
-                            <p><span className="bold">Name:</span> <span className="capitalize">{user.name}</span></p>
-                            <p><span className="bold">Phone:</span> {user.phone}</p>
-                            <p><span className="bold">Email:</span> {user.email}</p>
-                        </div>
-                    ))}
+                <div>
+                    <div className="responded">
+                        {this.props.going.map(user => (
+                            <div key={user.id} className="usersGoing">
+                                <img src={user.picture} alt='' />
+                                <p><span className="bold">Name:</span> <span className="capitalize">{user.name}</span></p>
+                                <p><span className="bold">Phone:</span> {user.phone}</p>
+                                <p><span className="bold">Email:</span> {user.email}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="return">
+                        <Link to="/"><p><span className="uppercase">+ Add Invitees</span></p></Link>
+                    </div>
                 </div>
             </div>
         )

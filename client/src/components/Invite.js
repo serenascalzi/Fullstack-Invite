@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {getUsers, updateStatus} from '../actions/inviteActions'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 class Invite extends Component {
@@ -22,8 +23,8 @@ class Invite extends Component {
                 <h1>Invite</h1>
                 <div>
                     <div className="status">
-                        <p><span className="uppercase">Going:</span> {this.props.going.length}</p>
-                        <p><span className="uppercase">Not Going:</span> {this.props.notgoing.length}</p>
+                        <Link to="/going"><p><span className="uppercase">Going:</span> {this.props.going.length}</p></Link>
+                        <Link to="/notgoing"><p><span className="uppercase">Not Going:</span> {this.props.notgoing.length}</p></Link>
                     </div>
                     <div className="invited">
                         {this.props.users.map(user => (

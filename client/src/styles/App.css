@@ -22,7 +22,7 @@ h1 {
 	text-align:center;
 }
 
-.status, .response {
+.status, .response, .return {
 	display:flex;
 	justify-content:space-around;
 	width:250px;
@@ -50,6 +50,11 @@ img {
 
 p {
 	line-height:30px;
+}
+
+a {
+	color:black;
+	text-decoration:none;
 }
 
 .bold {
